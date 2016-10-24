@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Pricing\Price\RegularPrice">
+        <arguments>
+            <argument name="priceCurrency" xsi:type="object">Meanbee\TaxRounding\Model\PriceCurrency</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Tax\Model\Calculation">
+        <arguments>
+            <argument name="priceCurrency" xsi:type="object">Meanbee\TaxRounding\Model\PriceCurrency</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Quote\Model\Quote\Item">
+        <arguments>
+            <argument name="priceCurrency" xsi:type="object">Meanbee\TaxRounding\Model\PriceCurrency</argument>
+        </arguments>
+    </type>
+</config>
